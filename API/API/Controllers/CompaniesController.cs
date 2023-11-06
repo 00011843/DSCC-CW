@@ -10,7 +10,7 @@ using API.Models;
 
 namespace API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/")]
     [ApiController]
     public class CompaniesController : ControllerBase
     {
