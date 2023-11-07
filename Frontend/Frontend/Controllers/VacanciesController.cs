@@ -10,7 +10,7 @@ namespace Frontend.Controllers
 {
     public class VacanciesController : Controller
     {
-        Uri baseAddress = new Uri("http://localhost:5208/api");
+        Uri baseAddress = new Uri("http://ec2-54-183-238-215.us-west-1.compute.amazonaws.com/api");
         private readonly HttpClient _client;
 
         public VacanciesController()
