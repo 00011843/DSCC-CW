@@ -1,5 +1,5 @@
 [Unit]
-Description=DSCC CW of 00011843
+Description=DCCS CW of 00011843
 
 [Service]
 WorkingDirectory=/var/www/

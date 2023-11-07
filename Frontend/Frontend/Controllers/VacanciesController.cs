@@ -106,7 +106,7 @@ namespace Frontend.Controllers
             if (ModelState.IsValid)
             {
                 var content = new StringContent(JsonConvert.SerializeObject(vacancy), Encoding.UTF8, "application/json");
-                HttpResponseMessage response = _client.PutAsync(_client.BaseAddress + $"/vacancies/{id}", content).Result;
+                HttpResponseMessage response = _client.PutAsync(_client.BaseAddress + $"/vacancies/Edit/{id}", content).Result;
 
                 if (response.IsSuccessStatusCode)
                 {
