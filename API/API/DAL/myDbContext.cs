@@ -9,6 +9,13 @@ namespace API.DAL
         public DbSet<Company> Companies {get; set;}
         public DbSet<Vacancy> Vacancies { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Vacancy>()
+                .HasOne(v => v.Company)
+                .WithMany(c => c.Vacancies)
+                .HasForeignKey(v => v.CompanyId);
+        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
